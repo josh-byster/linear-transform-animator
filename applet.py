@@ -20,7 +20,7 @@ j_vector = [2, 1]
 # Returns how complete the transformation is on a scale from 0 to 1,
 # based on the current and total frame count
 def sigmoid(i):
-    return min(1.01 / (1 + math.exp(-10 / frames * i + 4)), 1)
+    return max(1.01799 / (1 + math.exp(-10 / frames * i + 4)) - 0.01799, 0)
 
 
 fig, ax = plt.subplots()
